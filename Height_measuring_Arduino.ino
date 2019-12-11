@@ -4,8 +4,8 @@
 
 #include <LiquidCrystal_I2C.h>
 LiquidCrystal_I2C lcd(0x3F, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);  // use lcd address 0x27 in the place of 0x3F ,if LCD not workd
-const int trigPin = 11;
-const int echoPin = 12;
+const int trigPin = 12;
+const int echoPin = 11;
 long duration;
 int distance;
 int tol=5;
@@ -16,8 +16,8 @@ int Height=0;
 int Sensor_h=175; //install sensor more on height than 175cm
 int MinHeight=100;  //miniumum height of person for better result ,you can change it upto 30
 void setup()
-{    pinMode(11, OUTPUT); 
-     pinMode(12, INPUT); 
+{    pinMode(12, OUTPUT); 
+     pinMode(11, INPUT); 
      lcd.begin(16, 2);
      lcd.print("Plz Stay away");
      lcd.setCursor(0, 1);
